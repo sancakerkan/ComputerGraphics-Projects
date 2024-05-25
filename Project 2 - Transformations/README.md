@@ -26,3 +26,5 @@ The `ApplyTransform` function combines two 3x3 transformation matrices to produc
 - Pressing the F4 key will reload the `project2.js` file without refreshing the entire page.
 
 **For detailed project instructions and the report format, please refer to [Project 2 Instructions](https://github.com/sancakerkan/ComputerGraphicsProjects/blob/main/Project%202%20-%20Transformations/Project%202%20Instructions.pdf) and [Project 2 Report](https://github.com/sancakerkan/ComputerGraphicsProjects/blob/main/Project%202%20-%20Transformations/Project2%20Report.pdf).**
+
+**[Project 2 Video](https://drive.google.com/file/d/1FNij6C_1HymDt4FfuUvY0mO7ZTbiCeJG/view?usp=drive_link)** *(Streamable)*
