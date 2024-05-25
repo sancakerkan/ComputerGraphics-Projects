@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<script id="vertex-shader" type="x-shader/x-vertex">
+#version 300 es
+
+in vec4 aPosition;
+in vec3 aNormal;
+
+out vec3 vProjTexCoord;
+out vec3 vLightDirection;
+out vec3 vNormal;
+
+uniform mat4 uModelViewMatrix;
+uniform mat4 uProjectionMatrix;
+uniform mat3 uNormalMatrix;
+
+uniform mat4 uLightViewMatrix;
+uniform mat4 uLightProjectionMatrix;
+uniform vec4 uLightPosition;
+
+void main()
+{
+    vec4 eyePosition = uModelViewMatrix*aPosition;
+    vec4 objLightPosition = uLightProjectionMatrix * uLightViewMatrix*eyePosition;
+    vProjTexCoord = 0.5 * objLightPosition.xyz + 0.5;
+
+    vLightDirection =normalize((eyePosition- uLightPosition).xyz);
+
+    vNormal = uNormalMatrix*aNormal;
+    gl_Position = uProjectionMatrix*eyePosition;
+}
+</script>
+
+<script id="fragment-shader" type="x-shader/x-fragment">
+#version 300 es
+
+precision mediump float;
+
+in vec3 vNormal;
+in vec3 vProjTexCoord;
+in vec3 vLightDirection;
+out vec4 fColor;
+
+uniform sampler2D uTextureMap;
+
+void
+main()
+{
+    vec4 spotLightColor = textureProj(uTextureMap, vProjTexCoord);
+    vec4 baseColor = vec4( 0.0, 0.0, 0.0, 1.0);
+
+    if(-dot(vNormal, vLightDirection)>0.0) fColor = spotLightColor;
+    else fColor = baseColor;
+}
+</script>
+
+<script type="text/javascript" src="../Common/initShaders.js"></script>
+<script type="text/javascript" src="../Common/MVnew.js"></script>
+<script type="text/javascript" src="projectiveTexture.js"></script>
+
+
+<body>
+<canvas id="gl-canvas" width="512" height="512">
+Oops ... your browser doesn't support the HTML5 canvas element
+</canvas>
+<div>
+<button id = "ButtonX">Rotate X</button>
+<button id = "ButtonY">Rotate Y</button>
+<button id = "ButtonZ">Rotate Z</button>
+<button id = "ButtonT">Toggle Cube Rotation</button>
+<button id = "ButtonL">Toggle Light Rotation</button>
+</div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+Checkpoint 1: Write down pxy
+Rx = [
+  1     0       0
+  0   cos(45°) -sin(45°)
+  0   sin(45°)  cos(45°)
+]
+Ry = [
+  cos(45°)  0  sin(45°)
+    0        1     0
+ -sin(45°)  0  cos(45°)
+]
+pxy = Rx * Ry * [0, 0, 0]
+pxy = [1, 0, 0]
+
+
+--------
+
+Checkpoint 2: Write down pyx
+Ry = [
+  cos(45°)  0  sin(45°)
+    0        1     0
+ -sin(45°)  0  cos(45°)
+]
+Rx = [
+  1     0       0
+  0   cos(45°) -sin(45°)
+  0   sin(45°)  cos(45°)
+]
+pyx = Ry * (Rx * [0, 0, 0])
+
+pyx = [0, 0, 0]
+
+
+
+
+
+
