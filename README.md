@@ -1,6 +1,6 @@
 # Computer Graphics Projects
 
-Welcome to my GitHub repository dedicated to Computer Graphics (CG) projects! Here, you'll find a collection of my work exploring various aspects of computer-generated imagery and visual effects. 
+Welcome to my repository dedicated to Computer Graphics (CG) projects! Here, you'll find a collection of my work exploring various aspects of computer-generated imagery and visual effects. 
 
 ## Projects
 
@@ -27,7 +27,15 @@ Welcome to my GitHub repository dedicated to Computer Graphics (CG) projects! He
 
 8. **[Project 8 - WebGL Robot Arm Simulation](Project8_WebGL_Robot_Arm_Simulation/README.md)**
    - In this project, you will create a robot arm simulation using WebGL.
+  
+## License
 
-## Repository Files Navigation
-- README.md
-- [Add other relevant files here]
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+# Repository Files Navigation
+
+- [Project 1 - Compositing Images](https://github.com/sancakerkan/ComputerGraphicsProjects/tree/main/Project%201%20-%20Compositing%20Images)
+      -[Project 1 Readme](https://github.com/sancakerkan/ComputerGraphics-Projects/blob/main/Project%201%20-%20Compositing%20Images/README.md)
+
+
+  
